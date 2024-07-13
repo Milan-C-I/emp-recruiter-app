@@ -1,0 +1,164 @@
+
+.emp-info{
+    margin-top: 80px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.emp-info p{
+    width: 80%;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 3px -3px 15px gray;
+    background: linear-gradient(45deg,black,rgba(188, 10, 241,0.2),rgba(0, 0, 255,0.3),black);
+}
+.emp-info p span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.log-sign-in{
+    display:flex;
+    justify-content: space-around;
+    margin-block: 100px;
+    border-radius: 10px;
+    border-block: 1px solid gray;
+    padding: 50px;
+    margin-inline: 50px;
+}
+.log-in,.sign-in{
+    display: block;
+    text-align: center;
+    border:3px solid white;
+    border-right: 1px dotted white;
+    border-top: none;
+    border-radius: 20px 20px 20px 20px;
+    padding: 5%;
+    padding-top: 1%;
+    background:linear-gradient(45deg,rgba(255, 255, 255,0.2),black);
+    transition: 0.5s ease;
+}
+.log-in:hover,.sign-in:hover{
+    box-shadow: -3px 3px 20px gray;
+    scale:102%;
+}
+.log-in span,.sign-in span{
+    display: block;
+    font-weight: bold;
+    font-size: 120%;
+}
+.log-in-btn,.sign-in-btn{
+    text-align: center;
+    width:100px;
+    height:100px;
+    margin-top: 10%;
+    border-radius: 50%;
+    font-weight: bolder;
+    border: 3px solid white;
+    background: linear-gradient(45deg,blue,rgb(145, 145, 255));
+    padding: 20px;
+}
+
+/* log in page desssssssssssssssssssss */
+
+.log-in-page,.sign-up-page{
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.8);
+}
+.log-in-form,.sign-up-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    background-color: black;
+    padding: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.log-in-form > button,.sign-up-form > button{
+    margin-inline: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(44, 44, 236);
+    padding:1%;
+    font-size: 20px;
+    font-weight:600;
+    font-style: italic;
+    border: 1px solid rgb(44, 44, 236);
+    padding-inline: 3%;
+    border-radius: 10px;
+    transition:0.2s;
+}
+.log-in-form > button > input,.sign-up-form > button > input{
+    font-style: italic;
+}
+.log-in-form > button:hover,.sign-up-form > button:hover{
+    border: 1px solid white;
+}
+.sign-up-form > label{
+    display: flex;
+    font-weight: bold;
+    justify-content:space-between;
+    align-items: center;
+}
+.sign-up-form > label > input{
+    scale:1.5;
+    margin-right:60%;
+}
+.log-in-form > div > label,.sign-up-form > div > label{
+    font-weight: bold;
+}
+.log-in-form > div > input::placeholder,.sign-up-form > div > input::placeholder{
+    font-size: 15px;
+    padding-inline: 5px;
+}
+.log-in-form > div > input,.sign-up-form > div > input{
+    border:3px solid white;
+    border-radius: 15px;
+    background-color: black;
+    padding-inline: 10px;
+    padding-block: 5px;
+    transition: 0.5s;
+}
+.error{
+    background:linear-gradient(90deg,rgba(128, 128, 128,0.3),black);
+    border-block:1px solid gray;
+    border-radius: 10px;
+    padding-block: 10px;
+    display: block;
+    text-align: center;
+    color:red;
+    font-size: 18px;
+    font-weight: bold;
+}
+.log-in-head , .sign-up-head{
+    color: rgb(190, 190, 255);
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.log-in-head::after , .sign-up-head::after{
+    content: "to-Emp-Recruiter";
+    text-align: center;
+    color: rgb(57, 137, 241);
+    border-radius: 50px;
+    margin-left:20px;
+    border-bottom:5px solid gray;
+    font-size: 25px;
+}
+.log-in-form > div , .sign-up-form > div{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+/* log in page end desssssssssssssssssssss */

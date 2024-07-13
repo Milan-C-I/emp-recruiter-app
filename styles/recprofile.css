@@ -1,0 +1,146 @@
+.rec-body{
+    margin-block:50px;
+    display:flex;
+    justify-content: space-around;
+}
+.posting{
+    text-align: center;
+    width:50vw;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+.notification{
+    text-align: center;
+    width:35vw;
+    border:2px solid gray;
+    border-radius: 20px;
+}
+.posting > h1,.notification > h1{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    margin:20px;
+    padding-bottom: 5px;
+    color: rgb(190, 190, 255);
+    border-radius: 50px;
+    border-bottom:5px solid gray;
+}
+.posting > button,.add-job > input{
+    font-weight: bold;
+    margin-inline: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(44, 44, 236);
+    padding:1%;
+    border: 1px solid rgb(44, 44, 236);
+    padding-inline: 3%;
+    border-radius: 10px;
+    transition:0.2s
+}
+.add-job > input{
+    font-weight:500;
+}
+.posting > button:hover,.add-job > input:hover{
+    border: 1px solid white;
+}
+.jobs-info{
+    position: relative;
+    margin:50px;
+    text-align: left;
+    border:1px double white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    overflow: hidden;
+}
+.add-job{
+    margin-inline:20px;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+.add-job > div{
+    text-align:left;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.add-job > div > label{
+    font-weight: bold;
+}
+.add-job > div > input::placeholder{
+    font-size: 15px;
+    padding-inline: 5px;
+}
+.add-job > div > input,.add-job > div > textarea{
+    width:70%;
+    border:3px solid white;
+    border-radius: 10px;
+    background-color: black;
+    padding-inline: 10px;
+    padding-block: 5px;
+    transition: 0.5s;
+}
+.notify-user-info{
+    font-family: system-ui, Helvetica, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid gray;
+    max-width: fit-content;
+    padding-inline: 10px;
+    padding-block: 10px;
+    border-radius: 6px;
+    margin-inline: 5px;
+    text-align:left;
+    margin: 10px;
+}
+.notify-user-info > h4{
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom:1px solid gray;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+.notify-user-info > .user-info > div > label{
+    font-weight: lighter;
+    color:rgb(124, 124, 255);
+}
+.notify-user-info > .user-info > div > span{
+    font-weight: bold;
+}
+.notify-user-info > button,.status-button > button{
+    font-weight: bold;
+    margin-inline: 10px;
+    margin-block: 10px;
+    background-color: rgb(44, 44, 236);
+    padding:1%;
+    border: 1px solid rgb(44, 44, 236);
+    padding-inline: 3%;
+    border-radius: 10px;
+    transition:0.2s
+}
+.notify-user-info > button:hover ,.status-button > button:hover{
+    border: 1px solid white;
+}
+.status-button > span{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-inline: 10px;
+    font-size: 25px;
+    text-shadow: 8px 2px 10px blue;
+}
+.user-info{
+    margin:10px;
+    border: 1px solid gray;
+    border-radius:10px;
+    padding: 10px;
+    max-width: fit-content;
+}
+.user-desc{
+    margin:10px;
+    border: 1px solid gray;
+    border-radius:10px;
+    padding: 10px;
+}
