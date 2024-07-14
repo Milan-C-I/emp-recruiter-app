@@ -7,7 +7,7 @@ let UserSchema = new mongoose.Schema({
     email: {type: String, unique: true},
     phoneNum: {type:Number, validator:{ validate:[/[6-9][0-9]{9}/, "Invalid phone number"], unique: true}},
     role: { type: String, enum: ["Applicant", "Recruiter"]},
-    gender: { type: String, enum: ["male", "female"]},
+    gender: { type: String, enum: ["male", "female", "other"]},
     age: Number,
     jobs: [{ type: mongoose.Types.ObjectId, ref: "jobs" }],
 }, {collection: "users"})

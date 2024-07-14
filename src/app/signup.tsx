@@ -39,6 +39,10 @@ export default function SignUpPage({setToggle}:{setToggle:(e:any)=>any}) {
                         Female
                         <input type="radio" name="gender" value="female" required></input>
                     </label> 
+                    <label>
+                        Other
+                        <input type="radio" name="gender" value="other" required></input>
+                    </label> 
                 </div>
                 <br />
                 <label>
