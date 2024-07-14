@@ -23,6 +23,9 @@ export default async function Notify({app}:{app:Application}){
                     <label>Age : </label><span>{user?.age}</span>
                 </div>
                 <div>
+                    <label>Gender : </label><span>{user?.gender}</span>
+                </div>
+                <div>
                     <label>ph number : </label><span>{user?.phoneNum}</span>
                 </div>
                 <div>

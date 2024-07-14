@@ -28,6 +28,7 @@ export interface User {
     email: string,
     phoneNum: number,
     role: string,
+    gender: string,
     age: number,
     jobs: string[],
 }

@@ -17,7 +17,7 @@ export default function JobCard({job}:{job:Job}){
     return(
         <div className="jobs-info">
             <div className="job-det">
-                <div className="job-det-image">image</div>
+                <div className="job-det-image">Hiring!!!<br/>Through<br/><span>Emp-Recruiter</span></div>
                 <div className="job-det-info">
                     <label>NAME : </label><span>{company?.name}</span>
                     <br/>

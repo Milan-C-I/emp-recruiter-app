@@ -28,6 +28,8 @@ export default function Notify({app}:{app:Application}) {
                     <br/>
                     <label>Your Age : <span>{user?.age}</span></label>
                     <br/>
+                    <label>Gender : <span>{user?.gender}</span></label>
+                    <br/>
                 </div>
                 <div className="pnotify-rec-info">       
                     <label>Applied for : <span>{j?.jobTitle}</span></label>

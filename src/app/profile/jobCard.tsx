@@ -1,30 +1,39 @@
 'use client';
-import { getUser } from "@/backend";
+import { getApplicationsByApplicant, getUser } from "@/backend";
 import { Application, Job, User } from "@/backend/interface";
 import { useEffect, useState } from "react";
 import ApplyForm from "./applyform";
 
-export default function JobCard({job,user,applied}:{job:Job,user:User,applied:Application[]}) {
+export default function JobCard({job,user}:{job:Job,user:User}) {
     // console.log(user);
     // let company = await getUser({userId: job.recruiterId});
 
     const [company,setCompany] = useState(null);
     const [apply,setApply] = useState<boolean>(false);
-
-    let thisApplication = applied?.find((app) => app.jobId === job._id);
-    let checkApplied = thisApplication?.applicantId === user?._id;
+    const [applied,setApplied] = useState(null);
 
     useEffect(() => {
         getUser({userId: job.recruiterId}).then((data) => {
             setCompany(data);
         });
-    }, []);
+        getApplicationsByApplicant({applicantId: user._id}).then((data) => setApplied(data));
+    }, [apply]);
+
+    let thisApplication = applied?.find((app) => app.jobId === job._id);
+    let checkApplied = thisApplication?.applicantId === user?._id;
+
 
     return(
         <>
             <div className="profile-jobs-info">
                 <div className="job-det">
-                    <div className="job-det-user"><label>My Name:</label><span>{user?.name}</span></div>
+                    <div className="job-det-user">
+                        <label>My Name:<span>{user?.name}</span></label>
+                        <br/>
+                        <div className="job-det-image">
+                            {checkApplied? "Applied!!!": "Applying"}<br/>Through<br/><span>Emp-Recruiter</span>
+                        </div>
+                    </div>
                     <div className="job-det-info">
                         <label>NAME : </label><span>{company?.name}</span>
                         <br/>

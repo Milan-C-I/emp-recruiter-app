@@ -29,6 +29,18 @@ export default function SignUpPage({setToggle}:{setToggle:(e:any)=>any}) {
                     <input type="number" placeholder="18" name="age" required></input>
                 </div>
                 <br />
+                <div className="gender">
+                    <label>Gender :</label><br />
+                    <label>
+                        Male
+                        <input type="radio" name="gender" value="male" required></input>
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="gender" value="female" required></input>
+                    </label> 
+                </div>
+                <br />
                 <label>
                     Job_Aspirant
                     <input type="radio" name="role" value="Applicant" required></input>

@@ -2,13 +2,12 @@
 
 import { useEffect, useState } from "react";
 import SearchInput from "./SearchInput";
-import Notify from "./notify";
+import Notify from "../notify";
 import { Job, User } from "@/backend/interface";
 import { getApplicationsByApplicant } from "@/backend";
-import JobCard from "./jobCard";
-import ProfileCard from "./profilecard";
+import JobCard from "../jobCard";
 
-export default function Menu({user,jobs}:{user:User,jobs:Job[]}) {
+export default function Menu({user,jobs,query}:{user:User,jobs:Job[],query:string}) {
     const [applied,setApplied] = useState(null);
 
     useEffect(() => {
@@ -21,21 +20,19 @@ export default function Menu({user,jobs}:{user:User,jobs:Job[]}) {
     return(
         <>
             <div className="profile-sidebar">
-                <SearchInput/>
+                <SearchInput defaultValue={query}/>
                 <div className="profile-notify" onClick={() => {
                     setNotify(prevNotify => !prevNotify);
-                    setProfile(false);
                 }}>
                     {notify ? "← back" : "notify"}
                 </div>
                 <div className="profile-info" onClick={() => {
                     setProfile(prevProfile => !prevProfile);
-                    setNotify(false);
                 }}>
                     {profile ? "← back" : "profile"}
                 </div>
             </div>
-            {profile && <ProfileCard user={user} />}
+            {/* {notify && <div className="notify-body"></div>} */}
             {notify && 
                 <div className="user-notification">
                     <span>NOTIFICATIONS »</span>
@@ -45,7 +42,7 @@ export default function Menu({user,jobs}:{user:User,jobs:Job[]}) {
                     {applied.length == 0 && <p>No new notifications</p>}
                 </div>    
             }
-            {!profile && !notify && <div className="profile-body">
+            {!notify && <div className="profile-body">
                 <span>JOB POSTINGS »</span>
                 {jobs?.map((job) => (
                     <JobCard key={job._id} job={job} user={user}/>

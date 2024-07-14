@@ -26,6 +26,7 @@
     background-color: rgb(36, 40, 78);
     border:0.5px solid white;
     border-radius: 10px;
+    box-shadow: 0px 0px 20px blue;
 }
 .profile-body{
     padding-block:10px;
@@ -62,8 +63,10 @@
 .job-det-user,.pnotify-user-info{
     grid-area: job-image;
     margin: 10px;
+    margin-top:25px;
     border: 1px solid gray;
     padding: 20px;
+    border-radius: 5px;
 }
 .job-det-desc,.pnotify-desc{
     grid-area: job-desc;
@@ -81,6 +84,19 @@
     grid-area: job-info;
     margin-block: 25px;
 }
+.job-det-image{
+    text-align: center;
+    font-weight: 600;
+    
+}
+.job-det-image > span{
+    text-align: center;
+    color: rgb(57, 137, 241);
+    border-radius: 50px;
+    font-style: italic;
+    border-bottom:5px solid gray;
+    font-size: 16px;
+}
 .app-form > form {
     margin-bottom: 0;
 }
@@ -96,8 +112,15 @@
 .job-det-info label,.app-det label,.job-det-user label,.pnotify-user-info label, .pnotify-desc > label > p,.pnotify-rec-info > label{
     font-weight: lighter;
 }
-.job-det-info span,.job-det-user span,.app-det span,.pnotify-user-info > label > span,.pnotify-rec-info > label > span{
+.job-det-user > label{
+    display: block;
+}
+.job-det-info span,.job-det-user > label > span,.app-det span,.pnotify-user-info > label > span,.pnotify-rec-info > label > span{
     font-weight: bold;
+}
+.job-det-user > label{
+    border-bottom:1px solid gray;
+    padding-bottom: 5px;
 }
 .job-det-desc,.pnotify-desc{
     text-align: center;
@@ -185,6 +208,7 @@
     margin: 10px;
 }
 .applied-msg{
+    width: fit-content;
     background:linear-gradient(45deg,black,rgba(188, 10, 241,0.2),rgba(0, 0, 255,0.3),black);
 }
 .status{
@@ -230,7 +254,7 @@
     top:0;
     z-index: 3;
 }
-.user-notification{
+.user-notification,.profile-card{
     width: 100%;
     backdrop-filter: blur(50px);
     border-radius: 20px;
@@ -243,7 +267,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.user-notification > span,.profile-body > span{
+.user-notification > span,.profile-body > span,.profile-card > span{
     position: absolute;
     top:0;
     left:0;
@@ -281,22 +305,29 @@
     background:linear-gradient(45deg,black,rgba(188, 10, 241,0.2),rgba(0, 0, 255,0.3),black);
 }
 .signout-btn{
+    font-size: 15px;
+    font-weight: 900;
+    font-style: italic;
     position:absolute;
     right: 0;
     top: 5px;
-    margin-inline: 10px;
+    margin-inline:10px;
     margin-block: 10px;
-    background-color: rgb(44, 44, 236);
+    background:linear-gradient(45deg,black,rgba(188, 10, 241,0.2),rgba(0, 0, 255,0.3),black);
     padding:10px;
-    border: 1px solid rgb(44, 44, 236);
-    padding-inline: 20px;
-    border-radius: 10px;
-    transition:0.2s;
+    border: 3px solid rgba(0, 0, 0,0.7);
+    border-left:3px solid white;
+    border-top: 3px solid white;
+    padding-inline: 30px;
+    border-radius: 50px 0px;
+    transition:0.25s;
 }
 .signout-btn:hover{
-    border: 1px solid white;
+    border: 3px solid white;
+    box-shadow: 0px 0px 20px white;
 }
 .application{
+    min-width: 60%;
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -327,4 +358,44 @@ textarea{
 textarea:focus{
     width: 90%;
     text-align: center;
+}
+.profile-card{
+    padding: 40px;
+    border:3px solid black;
+    background:linear-gradient(45deg,black,rgba(188, 10, 241,0.2),rgba(0, 0, 255,0.3),black);
+}
+.profile-card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid rgb(44, 44, 236); */
+    border: 3px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px black;
+    background-color: black;
+    padding-inline: 10px;
+    padding-block: 30px;
+    color: white;
+    margin-inline: 20px;
+    transition:0.25s;
+    background-color: rgba(0, 0, 0,0.5);
+}
+.profile-card-info > label{
+    background-color: black;
+    font-size: 25px;
+    font-weight: 100;
+    color:rgb(198, 194, 255);
+    border: 1px solid gray;
+    border-left:3px solid white;
+    border-bottom:3px solid white;
+    padding: 10px;
+    margin-inline: 40px;
+    margin-block:10px;
+    border-radius: 20px 0px 0px 20px;
+}
+.profile-card-info > label > span{
+    font-size:20px;
+    font-weight: bold;
+    margin-inline:10px;
+    color:white;
 }

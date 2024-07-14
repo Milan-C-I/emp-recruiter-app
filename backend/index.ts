@@ -122,6 +122,7 @@ export async function getJob({ jobId }: { jobId: string }) {
 export async function deleteJob({ jobId }: { jobId: string }) {
     try {
         await connect();
+        await ApplicationsModel.deleteMany({ jobId : jobId});
         return await JobsModel.deleteOne({ _id: jobId });
     } catch (err) {
         console.log(err);
