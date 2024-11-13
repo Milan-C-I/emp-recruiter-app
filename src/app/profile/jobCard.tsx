@@ -52,7 +52,7 @@ export default function JobCard({job,user}:{job:Job,user:User}) {
                 <div className="apply-info">
                     {checkApplied 
                         ? <label className="applied-msg">Applied</label>
-                        : <button type="button" className="applybtn" onClick={() => setApply(!apply)}>{(apply ? '← Cancel' : 'Apply →')}</button>
+                        : <button type="button" className="applybtn" onClick={() => setApply(!apply)}>{(apply ? '← Back' : 'Apply →')}</button>
                     }
                     <label>contact for more info :<span>{company?.phoneNum}</span><br></br><span>{company?.email}</span></label>
                     <br/>

@@ -1,7 +1,7 @@
 import { logIn } from "@/backend";
 import NextAuth, { AuthOptions } from "next-auth"
 import Credentials from "next-auth/providers/credentials";
-import Google from "next-auth/providers/google";
+// import Google from "next-auth/providers/google";
 
 export const authOptions:AuthOptions = {
   // Configure one or more authentication providers
